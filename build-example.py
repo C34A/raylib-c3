@@ -6,6 +6,9 @@ if len(sys.argv) < 2:
   print("Usage: build-example.py [example_name]\nex: python3 build-example.py basic_window")
   exit()
 
+# remove previous compilation to avoid confusion
+os.remove('a.out')
+
 exname = sys.argv[1]
 print(f"building example {exname}")
 
