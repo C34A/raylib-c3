@@ -11,7 +11,7 @@ func int main() {
   while(!raylib_c3::window_should_close()) {
     raylib_c3::begin_drawing();
       raylib_c3::clear_background(Color({ 245, 245, 245, 255 }));
-      raylib_c3::draw_text("Success!", 190, 200, 20, Color({ 80, 80, 80, 255 }));
+      raylib_c3::draw_text("Raylib running from C3!", 190, 200, 20, Color({ 80, 80, 80, 255 }));
     raylib_c3::end_drawing();
   }
   return 0;
