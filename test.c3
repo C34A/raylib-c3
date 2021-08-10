@@ -5,13 +5,14 @@ import raylib_c3;
 import std::io;
 
 func int main() {
-  raylib-c3::InitWindow(800, 400, "example");
+  raylib_c3::init_window(800, 400, "example");
 
-  raylib-c3::SetTargetFPS(144);
-  while(!raylib-c3::WindowShouldClose()) {
-    raylib-c3::BeginDrawing();
-      raylib-c3::ClearBackground(RAYWHITE);
-      raylib-c3::DrawText("Success!", 190, 200, 20, DARKGRAY);
-    raylib-c3::EndDrawing();
+  raylib_c3::set_target_fps(144);
+  while(!raylib_c3::window_should_close()) {
+    raylib_c3::begin_drawing();
+      raylib_c3::clear_background(Color({ 245, 245, 245, 255 }));
+      raylib_c3::draw_text("Success!", 190, 200, 20, Color({ 80, 80, 80, 255 }));
+    raylib_c3::end_drawing();
   }
+  return 0;
 }
