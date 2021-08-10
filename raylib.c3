@@ -931,11 +931,12 @@ extern func void set_trace_log_level(int logLevel) @extname("SetTraceLogLevel");
 extern func void *_mem_alloc(int size) @extname("*MemAlloc");
 extern func void *_mem_realloc(void *ptr, int size) @extname("*MemRealloc");
 extern func void mem_free(void *ptr) @extname("MemFree");
-extern func void set_trace_log_callback(TraceLogCallback callback) @extname("SetTraceLogCallback");
-extern func void set_load_file_data_callback(LoadFileDataCallback callback) @extname("SetLoadFileDataCallback");
-extern func void set_save_file_data_callback(SaveFileDataCallback callback) @extname("SetSaveFileDataCallback");
-extern func void set_load_file_text_callback(LoadFileTextCallback callback) @extname("SetLoadFileTextCallback");
-extern func void set_save_file_text_callback(SaveFileTextCallback callback) @extname("SetSaveFileTextCallback");
+// not dealing with these yet
+// extern func void set_trace_log_callback(TraceLogCallback callback) @extname("SetTraceLogCallback");
+// extern func void set_load_file_data_callback(LoadFileDataCallback callback) @extname("SetLoadFileDataCallback");
+// extern func void set_save_file_data_callback(SaveFileDataCallback callback) @extname("SetSaveFileDataCallback");
+// extern func void set_load_file_text_callback(LoadFileTextCallback callback) @extname("SetLoadFileTextCallback");
+// extern func void set_save_file_text_callback(SaveFileTextCallback callback) @extname("SetSaveFileTextCallback");
 extern func char *_load_file_data(char *fileName, uint *bytesRead) @extname("*LoadFileData");
 extern func void unload_file_data(char *data) @extname("UnloadFileData");
 extern func bool save_file_data(char *fileName, void *data, uint bytesToWrite) @extname("SaveFileData");
@@ -1134,7 +1135,7 @@ extern func void draw_texture(Texture2D texture, int posX, int posY, Color tint)
 extern func void draw_texture_v(Texture2D texture, Vector2 position, Color tint) @extname("DrawTextureV");
 extern func void draw_texture_ex(Texture2D texture, Vector2 position, float rotation, float scale, Color tint) @extname("DrawTextureEx");
 extern func void draw_texture_rec(Texture2D texture, Rectangle source, Vector2 position, Color tint) @extname("DrawTextureRec");
-extern func void draw_texture_quad(Texture2D texture, Vector2 tiling, Vector2 offset, Rectangle quad, Color tint) @extname("DrawTextureQuad");
+extern func void draw_texture_quad(Texture2D texture, Vector2 tiling, Vector2 offset, Rectangle quad_, Color tint) @extname("DrawTextureQuad");
 extern func void draw_texture_tiled(Texture2D texture, Rectangle source, Rectangle dest, Vector2 origin, float rotation, float scale, Color tint) @extname("DrawTextureTiled");
 extern func void draw_texture_pro(Texture2D texture, Rectangle source, Rectangle dest, Vector2 origin, float rotation, Color tint) @extname("DrawTexturePro");
 extern func void draw_texture_n_patch(Texture2D texture, NPatchInfo nPatchInfo, Rectangle dest, Vector2 origin, float rotation, Color tint) @extname("DrawTextureNPatch");
