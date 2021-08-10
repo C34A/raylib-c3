@@ -14,19 +14,19 @@ raylib.h in the working directory of this script and execute.
 def c_to_c3_type(t: str) -> str:
     t = t.replace("const ", "")
     if t == "float":
-        t = "CFloat"
+        t = "float"
     if t == "double":
-        t = "CDouble"
+        t = "double"
     if t == "int":
-        t = "CInt"
+        t = "int"
     if t == "unsigned int":
-        t = "CUInt"
+        t = "uint"
     if t == "long":
-        t = "CLong"
+        t = "long"
     if t == "char":
-        t = "CChar"
+        t = "byte"
     if t == "unsigned char":
-        t = "CChar"
+        t = "byte"
     return t
 
 
