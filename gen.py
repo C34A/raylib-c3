@@ -92,7 +92,7 @@ def parse_header(header_name: str, output_file: str, prefix: str):
             # arg_name, arg_type = fix_pointer(arg_name, arg_type)
             c3_arguments.append(arg_type + " " + arg_name)  # put everything together
         c3_arguments = ", ".join(c3_arguments)
-        c3_heads.append("func " + return_type + " " + to_snake_case(func_name) + "(" + c3_arguments + ") @extname(\"" + func_name + "\");")
+        c3_heads.append("extern func " + return_type + " " + to_snake_case(func_name) + "(" + c3_arguments + ") @extname(\"" + func_name + "\");")
 
     c3header = open(output_file, mode="w")
     # print("module raylibc3;\n", file=c3header)
