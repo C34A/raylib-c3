@@ -24,9 +24,9 @@ def c_to_c3_type(t: str) -> str:
     if t == "long":
         t = "long"
     if t == "char":
-        t = "byte"
+        t = "char"
     if t == "unsigned char":
-        t = "byte"
+        t = "char"
     return t
 
 # magic regex from stackoverflow :P https://stackoverflow.com/questions/1175208/elegant-python-function-to-convert-camelcase-to-snake-case
@@ -101,5 +101,5 @@ def parse_header(header_name: str, output_file: str, prefix: str):
     print("", file=c3header)
 
 
-parse_header("raylib.h", "raylib-wa.c3", "RLAPI ")
-parse_header("raymath.h", "raylib-c3-math.c3", "RMDEF ")
+parse_header("raylib.h", "raylib-gen.c3", "RLAPI ")
+parse_header("raymath.h", "raylib-math.c3", "RMDEF ")

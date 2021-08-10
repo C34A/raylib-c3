@@ -1,0 +1,623 @@
+ 834: 
+ 835: /* ----- General ----- */
+ 836: 
+ 837: func void init_window(int width, int height, byte[] title) @extname("InitWindow");
+                                                       ^
+(raylib.c3:837) Error: Expected ')'.
+
+ 852: func void minimize_window() @extname("MinimizeWindow");
+ 853: func void restore_window() @extname("RestoreWindow");
+ 854: func void set_window_icon(Image image) @extname("SetWindowIcon");
+ 855: func void set_window_title(byte *title) @extname("SetWindowTitle");
+                                      ^
+(raylib.c3:855) Error: Expected ')'.
+
+ 870: func int get_monitor_refresh_rate(int monitor) @extname("GetMonitorRefreshRate");
+ 871: func Vector2 get_window_position() @extname("GetWindowPosition");
+ 872: func Vector2 get_window_scale_dpi() @extname("GetWindowScaleDPI");
+ 873: func byte *_get_monitor_name(int monitor) @extname("*GetMonitorName");
+           ^^^^
+(raylib.c3:873) Error: A type name was expected here.
+
+ 871: func Vector2 get_window_position() @extname("GetWindowPosition");
+ 872: func Vector2 get_window_scale_dpi() @extname("GetWindowScaleDPI");
+ 873: func byte *_get_monitor_name(int monitor) @extname("*GetMonitorName");
+ 874: func void set_clipboard_text(byte *text) @extname("SetClipboardText");
+                                        ^
+(raylib.c3:874) Error: Expected ')'.
+
+ 872: func Vector2 get_window_scale_dpi() @extname("GetWindowScaleDPI");
+ 873: func byte *_get_monitor_name(int monitor) @extname("*GetMonitorName");
+ 874: func void set_clipboard_text(byte *text) @extname("SetClipboardText");
+ 875: func byte *_get_clipboard_text() @extname("*GetClipboardText");
+           ^^^^
+(raylib.c3:875) Error: A type name was expected here.
+
+ 901: func void end_vr_stereo_mode() @extname("EndVrStereoMode");
+ 902: func VrStereoConfig load_vr_stereo_config(VrDeviceInfo device) @extname("LoadVrStereoConfig");
+ 903: func void unload_vr_stereo_config(VrStereoConfig config) @extname("UnloadVrStereoConfig");
+ 904: func Shader load_shader(byte *vsFileName, byte *fsFileName) @extname("LoadShader");
+                                   ^
+(raylib.c3:904) Error: Expected ')'.
+
+ 902: func VrStereoConfig load_vr_stereo_config(VrDeviceInfo device) @extname("LoadVrStereoConfig");
+ 903: func void unload_vr_stereo_config(VrStereoConfig config) @extname("UnloadVrStereoConfig");
+ 904: func Shader load_shader(byte *vsFileName, byte *fsFileName) @extname("LoadShader");
+ 905: func Shader load_shader_from_memory(byte *vsCode, byte *fsCode) @extname("LoadShaderFromMemory");
+                                               ^
+(raylib.c3:905) Error: Expected ')'.
+
+ 903: func void unload_vr_stereo_config(VrStereoConfig config) @extname("UnloadVrStereoConfig");
+ 904: func Shader load_shader(byte *vsFileName, byte *fsFileName) @extname("LoadShader");
+ 905: func Shader load_shader_from_memory(byte *vsCode, byte *fsCode) @extname("LoadShaderFromMemory");
+ 906: func int get_shader_location(Shader shader, byte *uniformName) @extname("GetShaderLocation");
+                                                       ^
+(raylib.c3:906) Error: Expected ')'.
+
+ 904: func Shader load_shader(byte *vsFileName, byte *fsFileName) @extname("LoadShader");
+ 905: func Shader load_shader_from_memory(byte *vsCode, byte *fsCode) @extname("LoadShaderFromMemory");
+ 906: func int get_shader_location(Shader shader, byte *uniformName) @extname("GetShaderLocation");
+ 907: func int get_shader_location_attrib(Shader shader, byte *attribName) @extname("GetShaderLocationAttrib");
+                                                              ^
+(raylib.c3:907) Error: Expected ')'.
+
+ 922: func float get_frame_time() @extname("GetFrameTime");
+ 923: func double get_time() @extname("GetTime");
+ 924: func int get_random_value(int min, int max) @extname("GetRandomValue");
+ 925: func void take_screenshot(byte *fileName) @extname("TakeScreenshot");
+                                     ^
+(raylib.c3:925) Error: Expected ')'.
+
+ 924: func int get_random_value(int min, int max) @extname("GetRandomValue");
+ 925: func void take_screenshot(byte *fileName) @extname("TakeScreenshot");
+ 926: func void set_config_flags(uint flags) @extname("SetConfigFlags");
+ 927: func void trace_log(int logLevel, byte *text, ...) @extname("TraceLog");
+                                             ^
+(raylib.c3:927) Error: Expected ')'.
+
+ 934: func void set_save_file_data_callback(SaveFileDataCallback callback) @extname("SetSaveFileDataCallback");
+ 935: func void set_load_file_text_callback(LoadFileTextCallback callback) @extname("SetLoadFileTextCallback");
+ 936: func void set_save_file_text_callback(SaveFileTextCallback callback) @extname("SetSaveFileTextCallback");
+ 937: func byte *_load_file_data(byte *fileName, uint *bytesRead) @extname("*LoadFileData");
+           ^^^^
+(raylib.c3:937) Error: A type name was expected here.
+
+ 935: func void set_load_file_text_callback(LoadFileTextCallback callback) @extname("SetLoadFileTextCallback");
+ 936: func void set_save_file_text_callback(SaveFileTextCallback callback) @extname("SetSaveFileTextCallback");
+ 937: func byte *_load_file_data(byte *fileName, uint *bytesRead) @extname("*LoadFileData");
+ 938: func void unload_file_data(byte *data) @extname("UnloadFileData");
+                                      ^
+(raylib.c3:938) Error: Expected ')'.
+
+ 936: func void set_save_file_text_callback(SaveFileTextCallback callback) @extname("SetSaveFileTextCallback");
+ 937: func byte *_load_file_data(byte *fileName, uint *bytesRead) @extname("*LoadFileData");
+ 938: func void unload_file_data(byte *data) @extname("UnloadFileData");
+ 939: func bool save_file_data(byte *fileName, void *data, uint bytesToWrite) @extname("SaveFileData");
+                                    ^
+(raylib.c3:939) Error: Expected ')'.
+
+ 937: func byte *_load_file_data(byte *fileName, uint *bytesRead) @extname("*LoadFileData");
+ 938: func void unload_file_data(byte *data) @extname("UnloadFileData");
+ 939: func bool save_file_data(byte *fileName, void *data, uint bytesToWrite) @extname("SaveFileData");
+ 940: func byte *_load_file_text(byte *fileName) @extname("*LoadFileText");
+           ^^^^
+(raylib.c3:940) Error: A type name was expected here.
+
+ 938: func void unload_file_data(byte *data) @extname("UnloadFileData");
+ 939: func bool save_file_data(byte *fileName, void *data, uint bytesToWrite) @extname("SaveFileData");
+ 940: func byte *_load_file_text(byte *fileName) @extname("*LoadFileText");
+ 941: func void unload_file_text(byte *text) @extname("UnloadFileText");
+                                      ^
+(raylib.c3:941) Error: Expected ')'.
+
+ 939: func bool save_file_data(byte *fileName, void *data, uint bytesToWrite) @extname("SaveFileData");
+ 940: func byte *_load_file_text(byte *fileName) @extname("*LoadFileText");
+ 941: func void unload_file_text(byte *text) @extname("UnloadFileText");
+ 942: func bool save_file_text(byte *fileName, byte *text) @extname("SaveFileText");
+                                    ^
+(raylib.c3:942) Error: Expected ')'.
+
+ 940: func byte *_load_file_text(byte *fileName) @extname("*LoadFileText");
+ 941: func void unload_file_text(byte *text) @extname("UnloadFileText");
+ 942: func bool save_file_text(byte *fileName, byte *text) @extname("SaveFileText");
+ 943: func bool file_exists(byte *fileName) @extname("FileExists");
+                                 ^
+(raylib.c3:943) Error: Expected ')'.
+
+ 941: func void unload_file_text(byte *text) @extname("UnloadFileText");
+ 942: func bool save_file_text(byte *fileName, byte *text) @extname("SaveFileText");
+ 943: func bool file_exists(byte *fileName) @extname("FileExists");
+ 944: func bool directory_exists(byte *dirPath) @extname("DirectoryExists");
+                                      ^
+(raylib.c3:944) Error: Expected ')'.
+
+ 942: func bool save_file_text(byte *fileName, byte *text) @extname("SaveFileText");
+ 943: func bool file_exists(byte *fileName) @extname("FileExists");
+ 944: func bool directory_exists(byte *dirPath) @extname("DirectoryExists");
+ 945: func bool is_file_extension(byte *fileName, byte *ext) @extname("IsFileExtension");
+                                       ^
+(raylib.c3:945) Error: Expected ')'.
+
+ 943: func bool file_exists(byte *fileName) @extname("FileExists");
+ 944: func bool directory_exists(byte *dirPath) @extname("DirectoryExists");
+ 945: func bool is_file_extension(byte *fileName, byte *ext) @extname("IsFileExtension");
+ 946: func byte *_get_file_extension(byte *fileName) @extname("*GetFileExtension");
+           ^^^^
+(raylib.c3:946) Error: A type name was expected here.
+
+ 944: func bool directory_exists(byte *dirPath) @extname("DirectoryExists");
+ 945: func bool is_file_extension(byte *fileName, byte *ext) @extname("IsFileExtension");
+ 946: func byte *_get_file_extension(byte *fileName) @extname("*GetFileExtension");
+ 947: func byte *_get_file_name(byte *filePath) @extname("*GetFileName");
+           ^^^^
+(raylib.c3:947) Error: A type name was expected here.
+
+ 945: func bool is_file_extension(byte *fileName, byte *ext) @extname("IsFileExtension");
+ 946: func byte *_get_file_extension(byte *fileName) @extname("*GetFileExtension");
+ 947: func byte *_get_file_name(byte *filePath) @extname("*GetFileName");
+ 948: func byte *_get_file_name_without_ext(byte *filePath) @extname("*GetFileNameWithoutExt");
+           ^^^^
+(raylib.c3:948) Error: A type name was expected here.
+
+ 946: func byte *_get_file_extension(byte *fileName) @extname("*GetFileExtension");
+ 947: func byte *_get_file_name(byte *filePath) @extname("*GetFileName");
+ 948: func byte *_get_file_name_without_ext(byte *filePath) @extname("*GetFileNameWithoutExt");
+ 949: func byte *_get_directory_path(byte *filePath) @extname("*GetDirectoryPath");
+           ^^^^
+(raylib.c3:949) Error: A type name was expected here.
+
+ 947: func byte *_get_file_name(byte *filePath) @extname("*GetFileName");
+ 948: func byte *_get_file_name_without_ext(byte *filePath) @extname("*GetFileNameWithoutExt");
+ 949: func byte *_get_directory_path(byte *filePath) @extname("*GetDirectoryPath");
+ 950: func byte *_get_prev_directory_path(byte *dirPath) @extname("*GetPrevDirectoryPath");
+           ^^^^
+(raylib.c3:950) Error: A type name was expected here.
+
+ 948: func byte *_get_file_name_without_ext(byte *filePath) @extname("*GetFileNameWithoutExt");
+ 949: func byte *_get_directory_path(byte *filePath) @extname("*GetDirectoryPath");
+ 950: func byte *_get_prev_directory_path(byte *dirPath) @extname("*GetPrevDirectoryPath");
+ 951: func byte *_get_working_directory() @extname("*GetWorkingDirectory");
+           ^^^^
+(raylib.c3:951) Error: A type name was expected here.
+
+ 949: func byte *_get_directory_path(byte *filePath) @extname("*GetDirectoryPath");
+ 950: func byte *_get_prev_directory_path(byte *dirPath) @extname("*GetPrevDirectoryPath");
+ 951: func byte *_get_working_directory() @extname("*GetWorkingDirectory");
+ 952: func byte **_get_directory_files(byte *dirPath, int *count) @extname("**GetDirectoryFiles");
+           ^^^^
+(raylib.c3:952) Error: A type name was expected here.
+
+ 951: func byte *_get_working_directory() @extname("*GetWorkingDirectory");
+ 952: func byte **_get_directory_files(byte *dirPath, int *count) @extname("**GetDirectoryFiles");
+ 953: func void clear_directory_files() @extname("ClearDirectoryFiles");
+ 954: func bool change_directory(byte *dir) @extname("ChangeDirectory");
+                                      ^
+(raylib.c3:954) Error: Expected ')'.
+
+ 953: func void clear_directory_files() @extname("ClearDirectoryFiles");
+ 954: func bool change_directory(byte *dir) @extname("ChangeDirectory");
+ 955: func bool is_file_dropped() @extname("IsFileDropped");
+ 956: func byte **_get_dropped_files(int *count) @extname("**GetDroppedFiles");
+           ^^^^
+(raylib.c3:956) Error: A type name was expected here.
+
+ 955: func bool is_file_dropped() @extname("IsFileDropped");
+ 956: func byte **_get_dropped_files(int *count) @extname("**GetDroppedFiles");
+ 957: func void clear_dropped_files() @extname("ClearDroppedFiles");
+ 958: func long get_file_mod_time(byte *fileName) @extname("GetFileModTime");
+                                       ^
+(raylib.c3:958) Error: Expected ')'.
+
+ 956: func byte **_get_dropped_files(int *count) @extname("**GetDroppedFiles");
+ 957: func void clear_dropped_files() @extname("ClearDroppedFiles");
+ 958: func long get_file_mod_time(byte *fileName) @extname("GetFileModTime");
+ 959: func byte *_compress_data(byte *data, int dataLength, int *compDataLength) @extname("*CompressData");
+           ^^^^
+(raylib.c3:959) Error: A type name was expected here.
+
+ 957: func void clear_dropped_files() @extname("ClearDroppedFiles");
+ 958: func long get_file_mod_time(byte *fileName) @extname("GetFileModTime");
+ 959: func byte *_compress_data(byte *data, int dataLength, int *compDataLength) @extname("*CompressData");
+ 960: func byte *_decompress_data(byte *compData, int compDataLength, int *dataLength) @extname("*DecompressData");
+           ^^^^
+(raylib.c3:960) Error: A type name was expected here.
+
+ 960: func byte *_decompress_data(byte *compData, int compDataLength, int *dataLength) @extname("*DecompressData");
+ 961: func bool save_storage_value(uint position, int value) @extname("SaveStorageValue");
+ 962: func int load_storage_value(uint position) @extname("LoadStorageValue");
+ 963: func void open_url(byte *url) @extname("OpenURL");
+                              ^
+(raylib.c3:963) Error: Expected ')'.
+
+ 969: func int get_key_pressed() @extname("GetKeyPressed");
+ 970: func int get_char_pressed() @extname("GetCharPressed");
+ 971: func bool is_gamepad_available(int gamepad) @extname("IsGamepadAvailable");
+ 972: func bool is_gamepad_name(int gamepad, byte *name) @extname("IsGamepadName");
+                                                  ^
+(raylib.c3:972) Error: Expected ')'.
+
+ 970: func int get_char_pressed() @extname("GetCharPressed");
+ 971: func bool is_gamepad_available(int gamepad) @extname("IsGamepadAvailable");
+ 972: func bool is_gamepad_name(int gamepad, byte *name) @extname("IsGamepadName");
+ 973: func byte *_get_gamepad_name(int gamepad) @extname("*GetGamepadName");
+           ^^^^
+(raylib.c3:973) Error: A type name was expected here.
+
+ 978: func int get_gamepad_button_pressed() @extname("GetGamepadButtonPressed");
+ 979: func int get_gamepad_axis_count(int gamepad) @extname("GetGamepadAxisCount");
+ 980: func float get_gamepad_axis_movement(int gamepad, int axis) @extname("GetGamepadAxisMovement");
+ 981: func int set_gamepad_mappings(byte *mappings) @extname("SetGamepadMappings");
+                                         ^
+(raylib.c3:981) Error: Expected ')'.
+
+1055: func bool check_collision_point_triangle(Vector2 point, Vector2 p1, Vector2 p2, Vector2 p3) @extname("CheckCollisionPointTriangle");
+1056: func bool check_collision_lines(Vector2 startPos1, Vector2 endPos1, Vector2 startPos2, Vector2 endPos2, Vector2 *collisionPoint) @extname("CheckCollisionLines");
+1057: func Rectangle get_collision_rec(Rectangle rec1, Rectangle rec2) @extname("GetCollisionRec");
+1058: func Image load_image(byte *fileName) @extname("LoadImage");
+                                 ^
+(raylib.c3:1058) Error: Expected ')'.
+
+1056: func bool check_collision_lines(Vector2 startPos1, Vector2 endPos1, Vector2 startPos2, Vector2 endPos2, Vector2 *collisionPoint) @extname("CheckCollisionLines");
+1057: func Rectangle get_collision_rec(Rectangle rec1, Rectangle rec2) @extname("GetCollisionRec");
+1058: func Image load_image(byte *fileName) @extname("LoadImage");
+1059: func Image load_image_raw(byte *fileName, int width, int height, int format, int headerSize) @extname("LoadImageRaw");
+                                     ^
+(raylib.c3:1059) Error: Expected ')'.
+
+1057: func Rectangle get_collision_rec(Rectangle rec1, Rectangle rec2) @extname("GetCollisionRec");
+1058: func Image load_image(byte *fileName) @extname("LoadImage");
+1059: func Image load_image_raw(byte *fileName, int width, int height, int format, int headerSize) @extname("LoadImageRaw");
+1060: func Image load_image_anim(byte *fileName, int *frames) @extname("LoadImageAnim");
+                                      ^
+(raylib.c3:1060) Error: Expected ')'.
+
+1058: func Image load_image(byte *fileName) @extname("LoadImage");
+1059: func Image load_image_raw(byte *fileName, int width, int height, int format, int headerSize) @extname("LoadImageRaw");
+1060: func Image load_image_anim(byte *fileName, int *frames) @extname("LoadImageAnim");
+1061: func Image load_image_from_memory(byte *fileType, byte *fileData, int dataSize) @extname("LoadImageFromMemory");
+                                             ^
+(raylib.c3:1061) Error: Expected ')'.
+
+1062: func Image load_image_from_texture(Texture2D texture) @extname("LoadImageFromTexture");
+1063: func Image load_image_from_screen() @extname("LoadImageFromScreen");
+1064: func void unload_image(Image image) @extname("UnloadImage");
+1065: func bool export_image(Image image, byte *fileName) @extname("ExportImage");
+                                               ^
+(raylib.c3:1065) Error: Expected ')'.
+
+1063: func Image load_image_from_screen() @extname("LoadImageFromScreen");
+1064: func void unload_image(Image image) @extname("UnloadImage");
+1065: func bool export_image(Image image, byte *fileName) @extname("ExportImage");
+1066: func bool export_image_as_code(Image image, byte *fileName) @extname("ExportImageAsCode");
+                                                       ^
+(raylib.c3:1066) Error: Expected ')'.
+
+1074: func Image gen_image_cellular(int width, int height, int tileSize) @extname("GenImageCellular");
+1075: func Image image_copy(Image image) @extname("ImageCopy");
+1076: func Image image_from_image(Image image, Rectangle rec) @extname("ImageFromImage");
+1077: func Image image_text(byte *text, int fontSize, Color color) @extname("ImageText");
+                                 ^
+(raylib.c3:1077) Error: Expected ')'.
+
+1075: func Image image_copy(Image image) @extname("ImageCopy");
+1076: func Image image_from_image(Image image, Rectangle rec) @extname("ImageFromImage");
+1077: func Image image_text(byte *text, int fontSize, Color color) @extname("ImageText");
+1078: func Image image_text_ex(Font font, byte *text, float fontSize, float spacing, Color tint) @extname("ImageTextEx");
+                                               ^
+(raylib.c3:1078) Error: Expected ')'.
+
+1115: func void image_draw_rectangle_rec(Image *dst, Rectangle rec, Color color) @extname("ImageDrawRectangleRec");
+1116: func void image_draw_rectangle_lines(Image *dst, Rectangle rec, int thick, Color color) @extname("ImageDrawRectangleLines");
+1117: func void image_draw(Image *dst, Image src, Rectangle srcRec, Rectangle dstRec, Color tint) @extname("ImageDraw");
+1118: func void image_draw_text(Image *dst, byte *text, int posX, int posY, int fontSize, Color color) @extname("ImageDrawText");
+                                                 ^
+(raylib.c3:1118) Error: Expected ')'.
+
+1116: func void image_draw_rectangle_lines(Image *dst, Rectangle rec, int thick, Color color) @extname("ImageDrawRectangleLines");
+1117: func void image_draw(Image *dst, Image src, Rectangle srcRec, Rectangle dstRec, Color tint) @extname("ImageDraw");
+1118: func void image_draw_text(Image *dst, byte *text, int posX, int posY, int fontSize, Color color) @extname("ImageDrawText");
+1119: func void image_draw_text_ex(Image *dst, Font font, byte *text, Vector2 position, float fontSize, float spacing, Color tint) @extname("ImageDrawTextEx");
+                                                               ^
+(raylib.c3:1119) Error: Expected ')'.
+
+1117: func void image_draw(Image *dst, Image src, Rectangle srcRec, Rectangle dstRec, Color tint) @extname("ImageDraw");
+1118: func void image_draw_text(Image *dst, byte *text, int posX, int posY, int fontSize, Color color) @extname("ImageDrawText");
+1119: func void image_draw_text_ex(Image *dst, Font font, byte *text, Vector2 position, float fontSize, float spacing, Color tint) @extname("ImageDrawTextEx");
+1120: func Texture2D load_texture(byte *fileName) @extname("LoadTexture");
+                                       ^
+(raylib.c3:1120) Error: Expected ')'.
+
+1132: func void draw_texture_v(Texture2D texture, Vector2 position, Color tint) @extname("DrawTextureV");
+1133: func void draw_texture_ex(Texture2D texture, Vector2 position, float rotation, float scale, Color tint) @extname("DrawTextureEx");
+1134: func void draw_texture_rec(Texture2D texture, Rectangle source, Vector2 position, Color tint) @extname("DrawTextureRec");
+1135: func void draw_texture_quad(Texture2D texture, Vector2 tiling, Vector2 offset, Rectangle quad, Color tint) @extname("DrawTextureQuad");
+                                                                                               ^^^^
+(raylib.c3:1135) Error: Expected a parameter.
+
+1150: func void set_pixel_color(void *dstPtr, Color color, int format) @extname("SetPixelColor");
+1151: func int get_pixel_data_size(int width, int height, int format) @extname("GetPixelDataSize");
+1152: func Font get_font_default() @extname("GetFontDefault");
+1153: func Font load_font(byte *fileName) @extname("LoadFont");
+                               ^
+(raylib.c3:1153) Error: Expected ')'.
+
+1151: func int get_pixel_data_size(int width, int height, int format) @extname("GetPixelDataSize");
+1152: func Font get_font_default() @extname("GetFontDefault");
+1153: func Font load_font(byte *fileName) @extname("LoadFont");
+1154: func Font load_font_ex(byte *fileName, int fontSize, int *fontChars, int charsCount) @extname("LoadFontEx");
+                                  ^
+(raylib.c3:1154) Error: Expected ')'.
+
+1153: func Font load_font(byte *fileName) @extname("LoadFont");
+1154: func Font load_font_ex(byte *fileName, int fontSize, int *fontChars, int charsCount) @extname("LoadFontEx");
+1155: func Font load_font_from_image(Image image, Color key, int firstChar) @extname("LoadFontFromImage");
+1156: func Font load_font_from_memory(byte *fileType, byte *fileData, int dataSize, int fontSize, int *fontChars, int charsCount) @extname("LoadFontFromMemory");
+                                           ^
+(raylib.c3:1156) Error: Expected ')'.
+
+1154: func Font load_font_ex(byte *fileName, int fontSize, int *fontChars, int charsCount) @extname("LoadFontEx");
+1155: func Font load_font_from_image(Image image, Color key, int firstChar) @extname("LoadFontFromImage");
+1156: func Font load_font_from_memory(byte *fileType, byte *fileData, int dataSize, int fontSize, int *fontChars, int charsCount) @extname("LoadFontFromMemory");
+1157: func CharInfo *_load_font_data(byte *fileData, int dataSize, int fontSize, int *fontChars, int charsCount, int type) @extname("*LoadFontData");
+                                          ^
+(raylib.c3:1157) Error: Expected ')'.
+
+1159: func void unload_font_data(CharInfo *chars, int charsCount) @extname("UnloadFontData");
+1160: func void unload_font(Font font) @extname("UnloadFont");
+1161: func void draw_fps(int posX, int posY) @extname("DrawFPS");
+1162: func void draw_text(byte *text, int posX, int posY, int fontSize, Color color) @extname("DrawText");
+                               ^
+(raylib.c3:1162) Error: Expected ')'.
+
+1160: func void unload_font(Font font) @extname("UnloadFont");
+1161: func void draw_fps(int posX, int posY) @extname("DrawFPS");
+1162: func void draw_text(byte *text, int posX, int posY, int fontSize, Color color) @extname("DrawText");
+1163: func void draw_text_ex(Font font, byte *text, Vector2 position, float fontSize, float spacing, Color tint) @extname("DrawTextEx");
+                                             ^
+(raylib.c3:1163) Error: Expected ')'.
+
+1161: func void draw_fps(int posX, int posY) @extname("DrawFPS");
+1162: func void draw_text(byte *text, int posX, int posY, int fontSize, Color color) @extname("DrawText");
+1163: func void draw_text_ex(Font font, byte *text, Vector2 position, float fontSize, float spacing, Color tint) @extname("DrawTextEx");
+1164: func void draw_text_rec(Font font, byte *text, Rectangle rec, float fontSize, float spacing, bool wordWrap, Color tint) @extname("DrawTextRec");
+                                              ^
+(raylib.c3:1164) Error: Expected ')'.
+
+1162: func void draw_text(byte *text, int posX, int posY, int fontSize, Color color) @extname("DrawText");
+1163: func void draw_text_ex(Font font, byte *text, Vector2 position, float fontSize, float spacing, Color tint) @extname("DrawTextEx");
+1164: func void draw_text_rec(Font font, byte *text, Rectangle rec, float fontSize, float spacing, bool wordWrap, Color tint) @extname("DrawTextRec");
+1165: func void draw_text_rec_ex(Font font, byte *text, Rectangle rec, float fontSize, float spacing, bool wordWrap, Color tint, int selectStart, int selectLength, Color selectTint, Color selectBackTint) @extname("DrawTextRecEx");
+                                                 ^
+(raylib.c3:1165) Error: Expected ')'.
+
+1164: func void draw_text_rec(Font font, byte *text, Rectangle rec, float fontSize, float spacing, bool wordWrap, Color tint) @extname("DrawTextRec");
+1165: func void draw_text_rec_ex(Font font, byte *text, Rectangle rec, float fontSize, float spacing, bool wordWrap, Color tint, int selectStart, int selectLength, Color selectTint, Color selectBackTint) @extname("DrawTextRecEx");
+1166: func void draw_text_codepoint(Font font, int codepoint, Vector2 position, float fontSize, Color tint) @extname("DrawTextCodepoint");
+1167: func int measure_text(byte *text, int fontSize) @extname("MeasureText");
+                                 ^
+(raylib.c3:1167) Error: Expected ')'.
+
+1165: func void draw_text_rec_ex(Font font, byte *text, Rectangle rec, float fontSize, float spacing, bool wordWrap, Color tint, int selectStart, int selectLength, Color selectTint, Color selectBackTint) @extname("DrawTextRecEx");
+1166: func void draw_text_codepoint(Font font, int codepoint, Vector2 position, float fontSize, Color tint) @extname("DrawTextCodepoint");
+1167: func int measure_text(byte *text, int fontSize) @extname("MeasureText");
+1168: func Vector2 measure_text_ex(Font font, byte *text, float fontSize, float spacing) @extname("MeasureTextEx");
+                                                   ^
+(raylib.c3:1168) Error: Expected ')'.
+
+1167: func int measure_text(byte *text, int fontSize) @extname("MeasureText");
+1168: func Vector2 measure_text_ex(Font font, byte *text, float fontSize, float spacing) @extname("MeasureTextEx");
+1169: func int get_glyph_index(Font font, int codepoint) @extname("GetGlyphIndex");
+1170: func int text_copy(byte *dst, byte *src) @extname("TextCopy");
+                              ^
+(raylib.c3:1170) Error: Expected ')'.
+
+1168: func Vector2 measure_text_ex(Font font, byte *text, float fontSize, float spacing) @extname("MeasureTextEx");
+1169: func int get_glyph_index(Font font, int codepoint) @extname("GetGlyphIndex");
+1170: func int text_copy(byte *dst, byte *src) @extname("TextCopy");
+1171: func bool text_is_equal(byte *text1, byte *text2) @extname("TextIsEqual");
+                                   ^
+(raylib.c3:1171) Error: Expected ')'.
+
+1169: func int get_glyph_index(Font font, int codepoint) @extname("GetGlyphIndex");
+1170: func int text_copy(byte *dst, byte *src) @extname("TextCopy");
+1171: func bool text_is_equal(byte *text1, byte *text2) @extname("TextIsEqual");
+1172: func uint text_length(byte *text) @extname("TextLength");
+                                 ^
+(raylib.c3:1172) Error: Expected ')'.
+
+1170: func int text_copy(byte *dst, byte *src) @extname("TextCopy");
+1171: func bool text_is_equal(byte *text1, byte *text2) @extname("TextIsEqual");
+1172: func uint text_length(byte *text) @extname("TextLength");
+1173: func byte *_text_format(byte *text, ...) @extname("*TextFormat");
+           ^^^^
+(raylib.c3:1173) Error: A type name was expected here.
+
+1171: func bool text_is_equal(byte *text1, byte *text2) @extname("TextIsEqual");
+1172: func uint text_length(byte *text) @extname("TextLength");
+1173: func byte *_text_format(byte *text, ...) @extname("*TextFormat");
+1174: func byte *_text_subtext(byte *text, int position, int length) @extname("*TextSubtext");
+           ^^^^
+(raylib.c3:1174) Error: A type name was expected here.
+
+1172: func uint text_length(byte *text) @extname("TextLength");
+1173: func byte *_text_format(byte *text, ...) @extname("*TextFormat");
+1174: func byte *_text_subtext(byte *text, int position, int length) @extname("*TextSubtext");
+1175: func byte *_text_replace(byte *text, byte *replace, byte *by) @extname("*TextReplace");
+           ^^^^
+(raylib.c3:1175) Error: A type name was expected here.
+
+1173: func byte *_text_format(byte *text, ...) @extname("*TextFormat");
+1174: func byte *_text_subtext(byte *text, int position, int length) @extname("*TextSubtext");
+1175: func byte *_text_replace(byte *text, byte *replace, byte *by) @extname("*TextReplace");
+1176: func byte *_text_insert(byte *text, byte *insert, int position) @extname("*TextInsert");
+           ^^^^
+(raylib.c3:1176) Error: A type name was expected here.
+
+1174: func byte *_text_subtext(byte *text, int position, int length) @extname("*TextSubtext");
+1175: func byte *_text_replace(byte *text, byte *replace, byte *by) @extname("*TextReplace");
+1176: func byte *_text_insert(byte *text, byte *insert, int position) @extname("*TextInsert");
+1177: func byte *_text_join(byte **textList, int count, byte *delimiter) @extname("*TextJoin");
+           ^^^^
+(raylib.c3:1177) Error: A type name was expected here.
+
+1175: func byte *_text_replace(byte *text, byte *replace, byte *by) @extname("*TextReplace");
+1176: func byte *_text_insert(byte *text, byte *insert, int position) @extname("*TextInsert");
+1177: func byte *_text_join(byte **textList, int count, byte *delimiter) @extname("*TextJoin");
+1178: func byte **_text_split(byte *text, byte delimiter, int *count) @extname("**TextSplit");
+           ^^^^
+(raylib.c3:1178) Error: A type name was expected here.
+
+1176: func byte *_text_insert(byte *text, byte *insert, int position) @extname("*TextInsert");
+1177: func byte *_text_join(byte **textList, int count, byte *delimiter) @extname("*TextJoin");
+1178: func byte **_text_split(byte *text, byte delimiter, int *count) @extname("**TextSplit");
+1179: func void text_append(byte *text, byte *append, int *position) @extname("TextAppend");
+                                 ^
+(raylib.c3:1179) Error: Expected ')'.
+
+1177: func byte *_text_join(byte **textList, int count, byte *delimiter) @extname("*TextJoin");
+1178: func byte **_text_split(byte *text, byte delimiter, int *count) @extname("**TextSplit");
+1179: func void text_append(byte *text, byte *append, int *position) @extname("TextAppend");
+1180: func int text_find_index(byte *text, byte *find) @extname("TextFindIndex");
+                                    ^
+(raylib.c3:1180) Error: Expected ')'.
+
+1178: func byte **_text_split(byte *text, byte delimiter, int *count) @extname("**TextSplit");
+1179: func void text_append(byte *text, byte *append, int *position) @extname("TextAppend");
+1180: func int text_find_index(byte *text, byte *find) @extname("TextFindIndex");
+1181: func byte *_text_to_upper(byte *text) @extname("*TextToUpper");
+           ^^^^
+(raylib.c3:1181) Error: A type name was expected here.
+
+1179: func void text_append(byte *text, byte *append, int *position) @extname("TextAppend");
+1180: func int text_find_index(byte *text, byte *find) @extname("TextFindIndex");
+1181: func byte *_text_to_upper(byte *text) @extname("*TextToUpper");
+1182: func byte *_text_to_lower(byte *text) @extname("*TextToLower");
+           ^^^^
+(raylib.c3:1182) Error: A type name was expected here.
+
+1180: func int text_find_index(byte *text, byte *find) @extname("TextFindIndex");
+1181: func byte *_text_to_upper(byte *text) @extname("*TextToUpper");
+1182: func byte *_text_to_lower(byte *text) @extname("*TextToLower");
+1183: func byte *_text_to_pascal(byte *text) @extname("*TextToPascal");
+           ^^^^
+(raylib.c3:1183) Error: A type name was expected here.
+
+1181: func byte *_text_to_upper(byte *text) @extname("*TextToUpper");
+1182: func byte *_text_to_lower(byte *text) @extname("*TextToLower");
+1183: func byte *_text_to_pascal(byte *text) @extname("*TextToPascal");
+1184: func int text_to_integer(byte *text) @extname("TextToInteger");
+                                    ^
+(raylib.c3:1184) Error: Expected ')'.
+
+1182: func byte *_text_to_lower(byte *text) @extname("*TextToLower");
+1183: func byte *_text_to_pascal(byte *text) @extname("*TextToPascal");
+1184: func int text_to_integer(byte *text) @extname("TextToInteger");
+1185: func byte *_text_to_utf8(int *codepoints, int length) @extname("*TextToUtf8");
+           ^^^^
+(raylib.c3:1185) Error: A type name was expected here.
+
+1183: func byte *_text_to_pascal(byte *text) @extname("*TextToPascal");
+1184: func int text_to_integer(byte *text) @extname("TextToInteger");
+1185: func byte *_text_to_utf8(int *codepoints, int length) @extname("*TextToUtf8");
+1186: func int *_load_codepoints(byte *text, int *count) @extname("*LoadCodepoints");
+                                      ^
+(raylib.c3:1186) Error: Expected ')'.
+
+1185: func byte *_text_to_utf8(int *codepoints, int length) @extname("*TextToUtf8");
+1186: func int *_load_codepoints(byte *text, int *count) @extname("*LoadCodepoints");
+1187: func void unload_codepoints(int *codepoints) @extname("UnloadCodepoints");
+1188: func int get_codepoints_count(byte *text) @extname("GetCodepointsCount");
+                                         ^
+(raylib.c3:1188) Error: Expected ')'.
+
+1186: func int *_load_codepoints(byte *text, int *count) @extname("*LoadCodepoints");
+1187: func void unload_codepoints(int *codepoints) @extname("UnloadCodepoints");
+1188: func int get_codepoints_count(byte *text) @extname("GetCodepointsCount");
+1189: func int get_codepoint(byte *text, int *bytesProcessed) @extname("GetCodepoint");
+                                  ^
+(raylib.c3:1189) Error: Expected ')'.
+
+1187: func void unload_codepoints(int *codepoints) @extname("UnloadCodepoints");
+1188: func int get_codepoints_count(byte *text) @extname("GetCodepointsCount");
+1189: func int get_codepoint(byte *text, int *bytesProcessed) @extname("GetCodepoint");
+1190: func byte *_codepoint_to_utf8(int codepoint, int *byteLength) @extname("*CodepointToUtf8");
+           ^^^^
+(raylib.c3:1190) Error: A type name was expected here.
+
+1206: func void draw_plane(Vector3 centerPos, Vector2 size, Color color) @extname("DrawPlane");
+1207: func void draw_ray(Ray ray, Color color) @extname("DrawRay");
+1208: func void draw_grid(int slices, float spacing) @extname("DrawGrid");
+1209: func Model load_model(byte *fileName) @extname("LoadModel");
+                                 ^
+(raylib.c3:1209) Error: Expected ')'.
+
+1224: func void unload_mesh(Mesh mesh) @extname("UnloadMesh");
+1225: func void draw_mesh(Mesh mesh, Material material, Matrix transform) @extname("DrawMesh");
+1226: func void draw_mesh_instanced(Mesh mesh, Material material, Matrix *transforms, int instances) @extname("DrawMeshInstanced");
+1227: func bool export_mesh(Mesh mesh, byte *fileName) @extname("ExportMesh");
+                                            ^
+(raylib.c3:1227) Error: Expected ')'.
+
+1239: func Mesh gen_mesh_knot(float radius, float size, int radSeg, int sides) @extname("GenMeshKnot");
+1240: func Mesh gen_mesh_heightmap(Image heightmap, Vector3 size) @extname("GenMeshHeightmap");
+1241: func Mesh gen_mesh_cubicmap(Image cubicmap, Vector3 cubeSize) @extname("GenMeshCubicmap");
+1242: func Material *_load_materials(byte *fileName, int *materialCount) @extname("*LoadMaterials");
+                                          ^
+(raylib.c3:1242) Error: Expected ')'.
+
+1244: func void unload_material(Material material) @extname("UnloadMaterial");
+1245: func void set_material_texture(Material *material, int mapType, Texture2D texture) @extname("SetMaterialTexture");
+1246: func void set_model_mesh_material(Model *model, int meshId, int materialId) @extname("SetModelMeshMaterial");
+1247: func ModelAnimation *_load_model_animations(byte *fileName, int *animsCount) @extname("*LoadModelAnimations");
+                                                       ^
+(raylib.c3:1247) Error: Expected ')'.
+
+1262: func void close_audio_device() @extname("CloseAudioDevice");
+1263: func bool is_audio_device_ready() @extname("IsAudioDeviceReady");
+1264: func void set_master_volume(float volume) @extname("SetMasterVolume");
+1265: func Wave load_wave(byte *fileName) @extname("LoadWave");
+                               ^
+(raylib.c3:1265) Error: Expected ')'.
+
+1263: func bool is_audio_device_ready() @extname("IsAudioDeviceReady");
+1264: func void set_master_volume(float volume) @extname("SetMasterVolume");
+1265: func Wave load_wave(byte *fileName) @extname("LoadWave");
+1266: func Wave load_wave_from_memory(byte *fileType, byte *fileData, int dataSize) @extname("LoadWaveFromMemory");
+                                           ^
+(raylib.c3:1266) Error: Expected ')'.
+
+1264: func void set_master_volume(float volume) @extname("SetMasterVolume");
+1265: func Wave load_wave(byte *fileName) @extname("LoadWave");
+1266: func Wave load_wave_from_memory(byte *fileType, byte *fileData, int dataSize) @extname("LoadWaveFromMemory");
+1267: func Sound load_sound(byte *fileName) @extname("LoadSound");
+                                 ^
+(raylib.c3:1267) Error: Expected ')'.
+
+1269: func void update_sound(Sound sound, void *data, int samplesCount) @extname("UpdateSound");
+1270: func void unload_wave(Wave wave) @extname("UnloadWave");
+1271: func void unload_sound(Sound sound) @extname("UnloadSound");
+1272: func bool export_wave(Wave wave, byte *fileName) @extname("ExportWave");
+                                            ^
+(raylib.c3:1272) Error: Expected ')'.
+
+1270: func void unload_wave(Wave wave) @extname("UnloadWave");
+1271: func void unload_sound(Sound sound) @extname("UnloadSound");
+1272: func bool export_wave(Wave wave, byte *fileName) @extname("ExportWave");
+1273: func bool export_wave_as_code(Wave wave, byte *fileName) @extname("ExportWaveAsCode");
+                                                    ^
+(raylib.c3:1273) Error: Expected ')'.
+
+1286: func void wave_crop(Wave *wave, int initSample, int finalSample) @extname("WaveCrop");
+1287: func float *_load_wave_samples(Wave wave) @extname("*LoadWaveSamples");
+1288: func void unload_wave_samples(float *samples) @extname("UnloadWaveSamples");
+1289: func Music load_music_stream(byte *fileName) @extname("LoadMusicStream");
+                                        ^
+(raylib.c3:1289) Error: Expected ')'.
+
+1287: func float *_load_wave_samples(Wave wave) @extname("*LoadWaveSamples");
+1288: func void unload_wave_samples(float *samples) @extname("UnloadWaveSamples");
+1289: func Music load_music_stream(byte *fileName) @extname("LoadMusicStream");
+1290: func Music load_music_stream_from_memory(byte *fileType, byte *data, int dataSize) @extname("LoadMusicStreamFromMemory");
+                                                    ^
+(raylib.c3:1290) Error: Expected ')'.
+
