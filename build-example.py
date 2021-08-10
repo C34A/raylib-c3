@@ -7,7 +7,8 @@ if len(sys.argv) < 2:
   exit()
 
 # remove previous compilation to avoid confusion
-os.remove('a.out')
+if os.path.exists('a.out'):
+  os.remove('a.out')
 
 exname = sys.argv[1]
 print(f"building example {exname}")
