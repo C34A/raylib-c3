@@ -736,8 +736,8 @@ enum NPatchLayout : int {
 
 /* -----  Math  ----- */
 
-%replaceme_math%
+!replaceme_math!
 
 /* ----- General ----- */
 
-%replaceme_general%
+!replaceme_general!

@@ -3,20 +3,23 @@ This script simply takes the contents of raylib-gen.c3 and raylib-math.c3
 and puts them into raylib_types.c3 to create raylib.c3
 """
 
-f_math = open("raylib-math.c3")
+f_math = open("raylib-math.c3", "r")
 math = f_math.read()
 f_math.close()
 
-f_gen = open("raylib-gen.c3")
+f_gen = open("raylib-gen.c3", "r")
 gen = f_gen.read()
 f_gen.close()
 
-f_types = open("raylib-gen.c3")
-types = f_gen.read()
+f_types = open("raylib_types.c3", "r")
+types = f_types.read()
 f_types.close()
 
-types.replace(r'%replaceme_math%', math)
-types.replace(r'%replaceme_general%', gen)
+math = math.replace('float3', 'Float3')
+math = math.replace('float16', 'Float16')
 
-with open("raylib.c3") as out:
+types = types.replace('!replaceme_math!', math)
+types = types.replace('!replaceme_general!', gen)
+
+with open("raylib.c3", "w") as out:
   out.write(types)
