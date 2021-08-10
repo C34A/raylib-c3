@@ -53,7 +53,7 @@ def fix_enums(arg_name, arg_type, func_name):
     return arg_type
 
 
-small_structs = ["Vector2", "Vector3", "Vector4", "Quaternion", "Color", "Rectangle", "Shader"]
+# small_structs = ["Vector2", "Vector3", "Vector4", "Quaternion", "Color", "Rectangle", "Shader"]
 
 
 def parse_header(header_name: str, output_file: str, prefix: str):

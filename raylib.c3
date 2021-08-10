@@ -30,7 +30,7 @@ struct Vector4 {
   float w;
 }
 
-define Quaternion = Vector3;
+define Quaternion = Vector4;
 
 struct Matrix {
   float m0;
