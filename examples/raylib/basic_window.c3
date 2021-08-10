@@ -1,4 +1,4 @@
-module test;
+module basic_window;
 
 import raylib_c3;
 
