@@ -1,7 +1,8 @@
 # Raylib-C3
 
 This is my feeble attempt at making [C3](https://github.com/c3lang/c3c) language
-bindings for [raylib](https://www.raylib.com/).
+bindings for [raylib](https://www.raylib.com/). It is loosely based on
+[raylib-zig](https://github.com/Not-Nik/raylib-zig).
 
 This project is a work in progress and is not currently functional.
 
