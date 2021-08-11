@@ -16,19 +16,18 @@ func void main() {
   raylib_c3::set_target_fps(60);
 
   while (!raylib_c3::window_should_close()) {
-    // These seem to crash c3c at the moment, not sure why.
-    // if (raylib_c3::is_key_down(raylib_c3::KeyboardKey.KEY_RIGHT)) {
-    //   ballPosition.x += 2.0;
-    // }
-    // if (raylib_c3::is_key_down(raylib_c3::KeyboardKey.KEY_LEFT)) {
-    //   ballPosition.x -= 2.0;
-    // }
-    // if (raylib_c3::is_key_down(raylib_c3::KeyboardKey.KEY_UP)) {
-    //   ballPosition.x -= 2.0;
-    // }
-    // if (raylib_c3::is_key_down(raylib_c3::KeyboardKey.KEY_DOWN)) {
-    //   ballPosition.x += 2.0;
-    // }
+    if (raylib_c3::is_key_down(raylib_c3::KeyboardKey.KEY_RIGHT)) {
+      ballPosition.x += 2.0;
+    }
+    if (raylib_c3::is_key_down(raylib_c3::KeyboardKey.KEY_LEFT)) {
+      ballPosition.x -= 2.0;
+    }
+    if (raylib_c3::is_key_down(raylib_c3::KeyboardKey.KEY_UP)) {
+      ballPosition.y -= 2.0;
+    }
+    if (raylib_c3::is_key_down(raylib_c3::KeyboardKey.KEY_DOWN)) {
+      ballPosition.y += 2.0;
+    }
 
 
     raylib_c3::begin_drawing();
