@@ -2,12 +2,11 @@ module basic_window;
 
 import raylib_c3;
 
-import std::io;
-
 func void main() {
   raylib_c3::init_window(800, 400, "example");
 
-  raylib_c3::set_target_fps(144);
+  raylib_c3::set_target_fps(60);
+
   while(!raylib_c3::window_should_close()) {
     raylib_c3::begin_drawing();
       raylib_c3::clear_background(RAYWHITE);
