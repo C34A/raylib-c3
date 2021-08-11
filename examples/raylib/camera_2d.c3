@@ -65,7 +65,7 @@ func void main() {
     } else if (camera.rotation < -40) {
       camera.rotation = -40;
     }
-    
+
     camera.zoom += (float)(raylib_c3::get_mouse_wheel_move())*0.05;
 
     if (camera.zoom > 3.0) {
@@ -97,7 +97,7 @@ func void main() {
         raylib_c3::draw_line(
           (int)(camera.target.x),
           -HEIGHT*10,
-          (int)(camera.target.x), 
+          (int)(camera.target.x),
           HEIGHT*10,
           GREEN
         );

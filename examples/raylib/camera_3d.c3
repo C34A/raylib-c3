@@ -8,6 +8,7 @@ func void main() {
   const int WIDTH = 800;
   const int HEIGHT = 450;
 
+  raylib_c3::set_config_flags(ConfigFlags.FLAG_WINDOW_RESIZABLE);
   raylib_c3::init_window(WIDTH, HEIGHT, "example");
 
   Camera3D camera;

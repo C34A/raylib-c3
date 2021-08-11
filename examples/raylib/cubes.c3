@@ -81,5 +81,7 @@ func void main() {
   raylib_c3::close_window();
 }
 
+// These are C library functions that we need to use.
+// Hopefully in the future it will be possible to use std::math instead of these.
 extern func double sin(double x);
 extern func double cos(double x);
