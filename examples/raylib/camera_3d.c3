@@ -19,17 +19,6 @@ func void main() {
 
   Vector3 cubePosition = Vector3({0.0, 0.0, 0.0});
 
-  io::print("camera:\npos: ");
-  print_vec3(camera.position);
-  io::print("camera.target: ");
-  print_vec3(camera.target);
-  io::print("camera.target: ");
-  print_vec3(camera.target);
-  io::printf("camera.fovy: %f\ncamera.projection: %d\n",
-    camera.fovy, camera.projection);
-  io::print("cubePosition: ");
-  print_vec3(cubePosition);
-
   raylib_c3::set_target_fps(60);
   while(!raylib_c3::window_should_close()) {
     raylib_c3::begin_drawing();
@@ -52,8 +41,4 @@ func void main() {
   }
 
   raylib_c3::close_window();
-}
-
-func void print_vec3(Vector3 v) {
-  io::printf("%f %f %f\n", v.x, v.y, v.z);
 }
