@@ -8,6 +8,7 @@ if len(sys.argv) < 2:
 
 # remove previous compilation to avoid confusion
 if os.path.exists('a.out'):
+  print('deleting old a.out')
   os.remove('a.out')
 
 exname = sys.argv[1]
