@@ -73,7 +73,7 @@ func void main() {
     } else if (camera.zoom < 0.1) {
       camera.zoom = 0.1;
     }
-    
+
     if (raylib_c3::is_key_pressed(KeyboardKey.KEY_R)) {
       camera.zoom = 1.0;
       camera.rotation = 0.0;
@@ -85,7 +85,7 @@ func void main() {
 
       raylib_c3::clear_background(RAYWHITE);
 
-      raylib_c3::begin_mode2_d(camera);
+      raylib_c3::begin_mode_2d(camera);
 
         raylib_c3::draw_rectangle(-6000, 320, 13000, 8000, DARKGRAY);
 
@@ -109,7 +109,7 @@ func void main() {
           GREEN
         );
 
-      raylib_c3::end_mode2_d();
+      raylib_c3::end_mode_2d();
 
       raylib_c3::draw_text("SCREEN AREA", 640, 10, 20, RED);
 

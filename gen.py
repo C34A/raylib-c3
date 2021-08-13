@@ -55,6 +55,15 @@ def fix_enums(arg_name, arg_type, func_name):
 
 # small_structs = ["Vector2", "Vector3", "Vector4", "Quaternion", "Color", "Rectangle", "Shader"]
 
+def fix_pointer(name: str, t: str):
+    t = t.replace("const ", "")
+    append = ""
+    while name.startswith("*"):
+        name = name[1:]
+        append += "*"
+    if len(append) != 0:
+        t = t + append
+    return name, t
 
 def parse_header(header_name: str, output_file: str, prefix: str):
     header = open(header_name, mode="r")
@@ -74,7 +83,7 @@ def parse_header(header_name: str, output_file: str, prefix: str):
         arguments = result.group(3)
 
         return_type = c_to_c3_type(return_type)
-        # func_name, return_type = fix_pointer(func_name, return_type)
+        func_name, return_type = fix_pointer(func_name, return_type)
 
         c3_arguments = []
         for arg in arguments.split(", "):
@@ -89,7 +98,8 @@ def parse_header(header_name: str, output_file: str, prefix: str):
             arg_type = fix_enums(arg_name, arg_type, func_name)
 
             arg_type = c_to_c3_type(arg_type)
-            # arg_name, arg_type = fix_pointer(arg_name, arg_type)
+            # I'm not sure this is necessary for c3
+            arg_name, arg_type = fix_pointer(arg_name, arg_type)
             c3_arguments.append(arg_type + " " + arg_name)  # put everything together
         c3_arguments = ", ".join(c3_arguments)
         c3_heads.append("extern func " + return_type + " " + to_snake_case(func_name) + "(" + c3_arguments + ") @extname(\"" + func_name + "\");")
