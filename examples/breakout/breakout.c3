@@ -95,8 +95,8 @@ func int main() {
         uint wall = collide_ball_walls(&ball, WIDTH, HEIGHT);
         if (wall) {
           if (wall == 3) {
-            health--;
-            if (health == 0) gameOver = true;
+            lives--;
+            if (lives == 0) gameOver = true;
           }
           break;
         }
@@ -126,7 +126,30 @@ func int main() {
       raylib_c3::draw_rectangle_rec(paddle, PADDLE_COLOR);
 
       // Draw score, lives
-      raylib_c3::
+      raylib_c3::draw_text(
+        raylib_c3::text_format("Score: %d", score),
+        10,
+        300,
+        20,
+        RED,
+      );
+      raylib_c3::draw_text(
+        raylib_c3::text_format("Lives: %d", lives),
+        10,
+        320,
+        20,
+        RED,
+      );
+
+      if (gameOver) {
+        raylib_c3::draw_text(
+          "Game Over!",
+          320,
+          220,
+          30,
+          RED,
+        );
+      }
 
     raylib_c3::end_drawing();
   }
@@ -189,7 +212,7 @@ func int collide_ball_walls(Ball* ball, int width, int height) {
     ball.vel.y *= -1;
     return 1;
   }
-  if ((ball.pos.x + BALL_SIZE) >= width || ) {
+  if ((ball.pos.x + BALL_SIZE) >= width) {
     // collision with right side
     ball.vel.x *= -1;
     return 2;
