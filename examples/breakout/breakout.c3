@@ -71,9 +71,16 @@ func int main() {
   uint lives = 3;
   bool gameOver = false;
 
-  raylib_c3::init_window(WIDTH, HEIGHT, "Breakout!");
 
+
+  raylib_c3::init_window(WIDTH, HEIGHT, "Breakout!");
+  raylib_c3::init_audio_device();
   raylib_c3::set_target_fps(144);
+
+  // These must be after init_audio_device!
+  Sound beep = raylib_c3::load_sound("examples/breakout/res/beep.wav");
+  Sound beep2 = raylib_c3::load_sound("examples/breakout/res/beep2.wav");
+  Sound boop = raylib_c3::load_sound("examples/breakout/res/boop.wav");
 
   while (!raylib_c3::window_should_close()) {
     // Update
@@ -92,18 +99,28 @@ func int main() {
       // collisions
       do {
         // Only allow one collision per frame for simplicity
+
+        // walls
         uint wall = collide_ball_walls(&ball, WIDTH, HEIGHT);
         if (wall) {
           if (wall == 3) {
             lives--;
             if (lives == 0) gameOver = true;
+            raylib_c3::play_sound(boop);
           }
+          raylib_c3::play_sound(beep2);
           break;
         }
-        if (collide_ball_paddle(&ball, &paddle)) break;
+        // paddle
+        if (collide_ball_paddle(&ball, &paddle)) {
+          raylib_c3::play_sound(beep2);
+          break;
+        }
+        // blocks
         for (int i = 0; i < (ROWS * COLUMNS); i++) {
           if (collide_ball_block(&ball, &blocks[i])) {
             score++;
+            raylib_c3::play_sound(beep);
             break;
           }
         }
@@ -153,7 +170,7 @@ func int main() {
 
     raylib_c3::end_drawing();
   }
-
+  raylib_c3::close_audio_device();
   return 0;
 }
 
