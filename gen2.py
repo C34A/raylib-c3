@@ -12,7 +12,7 @@ gen = f_gen.read()
 f_gen.close()
 
 f_types = open("raylib_types.c3", "r")
-types = f_types.read()
+final = f_types.read()
 f_types.close()
 
 # types must start with an uppercase character
@@ -26,8 +26,12 @@ gen = gen.replace('extern func void set_trace_log_callback(TraceLogCallback call
 # quad in c3 is a f128
 gen = gen.replace('Rectangle quad', 'Rectangle quad_')
 
-types = types.replace('!replaceme_math!', math)
-types = types.replace('!replaceme_general!', gen)
+final = final.replace('!replaceme_math!', math)
+final = final.replace('!replaceme_general!', gen)
+
+# fix this garbage
+final = final.replace('_mode3_d', '_mode_3d')
+final = final.replace('_mode2_d', '_mode_2d')
 
 with open("raylib.c3", "w") as out:
-  out.write(types)
+  out.write(final)

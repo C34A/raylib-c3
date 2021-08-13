@@ -39,7 +39,7 @@ extern func float vector3_distance(Vector3 v1, Vector3 v2) @extname("Vector3Dist
 extern func Vector3 vector3_negate(Vector3 v) @extname("Vector3Negate");
 extern func Vector3 vector3_divide(Vector3 v1, Vector3 v2) @extname("Vector3Divide");
 extern func Vector3 vector3_normalize(Vector3 v) @extname("Vector3Normalize");
-extern func void vector3_ortho_normalize(Vector3 *v1, Vector3 *v2) @extname("Vector3OrthoNormalize");
+extern func void vector3_ortho_normalize(Vector3* v1, Vector3* v2) @extname("Vector3OrthoNormalize");
 extern func Vector3 vector3_transform(Vector3 v, Matrix mat) @extname("Vector3Transform");
 extern func Vector3 vector3_rotate_by_quaternion(Vector3 v, Quaternion q) @extname("Vector3RotateByQuaternion");
 extern func Vector3 vector3_lerp(Vector3 v1, Vector3 v2, float amount) @extname("Vector3Lerp");
@@ -88,7 +88,7 @@ extern func Quaternion quaternion_from_vector3_to_vector3(Vector3 from, Vector3 
 extern func Quaternion quaternion_from_matrix(Matrix mat) @extname("QuaternionFromMatrix");
 extern func Matrix quaternion_to_matrix(Quaternion q) @extname("QuaternionToMatrix");
 extern func Quaternion quaternion_from_axis_angle(Vector3 axis, float angle) @extname("QuaternionFromAxisAngle");
-extern func void quaternion_to_axis_angle(Quaternion q, Vector3 *outAxis, float *outAngle) @extname("QuaternionToAxisAngle");
+extern func void quaternion_to_axis_angle(Quaternion q, Vector3* outAxis, float* outAngle) @extname("QuaternionToAxisAngle");
 extern func Quaternion quaternion_from_euler(float pitch, float yaw, float roll) @extname("QuaternionFromEuler");
 extern func Vector3 quaternion_to_euler(Quaternion q) @extname("QuaternionToEuler");
 extern func Quaternion quaternion_transform(Quaternion q, Matrix mat) @extname("QuaternionTransform");
