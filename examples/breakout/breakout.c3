@@ -85,8 +85,9 @@ func int main() {
   while (!raylib_c3::window_should_close()) {
     // Update
     if (!gameOver) {
-      ball.pos.x += ball.vel.x * BALL_SPEED;
-      ball.pos.y += ball.vel.y * BALL_SPEED;
+      // ball.pos.x += ball.vel.x * BALL_SPEED;
+      // ball.pos.y += ball.vel.y * BALL_SPEED;
+      ball.pos = ball.pos.add(ball.vel.scale(BALL_SPEED));
 
       // paddle movement
       if (raylib_c3::is_key_down(KEY_RIGHT) && paddle.x < (WIDTH - PADDLE_SIZE)) {

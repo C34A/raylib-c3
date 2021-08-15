@@ -9,6 +9,78 @@ struct Vector2 {
   float y;
 }
 
+func Vector2 Vector2.add(Vector2 *this, Vector2 other) @inline {
+  return vector2_add(*this, other);
+}
+
+func Vector2 Vector2.add_value(Vector2 *this, float other) @inline {
+  return vector2_add_value(*this, other);
+}
+
+func Vector2 Vector2.subtract(Vector2 *this, Vector2 other) @inline {
+  return vector2_subtract(*this, other);
+}
+
+func Vector2 Vector2.subtract_value(Vector2 *this, float other) @inline {
+  return vector2_subtract_value(*this, other);
+}
+
+func float Vector2.length(Vector2 *this) @inline {
+  return vector2_length(*this);
+}
+
+func float Vector2.length_sqr(Vector2 *this) @inline {
+  return vector2_length_sqr(*this);
+}
+
+func float Vector2.dot_product(Vector2 *this, Vector2 other) @inline {
+  return vector2_dot_product(*this, other);
+}
+
+func float Vector2.distance(Vector2 *this, Vector2 other) @inline {
+  return vector2_distance(*this, other);
+}
+
+func float Vector2.angle(Vector2 *this, Vector2 other) @inline {
+  return vector2_angle(*this, other);
+}
+
+func Vector2 Vector2.scale(Vector2 *this, float other) @inline {
+  return vector2_scale(*this, other);
+}
+
+func Vector2 Vector2.multiply(Vector2 *this, Vector2 other) @inline {
+  return vector2_multiply(*this, other);
+}
+
+func Vector2 Vector2.negate(Vector2 *this) @inline {
+  return vector2_negate(*this);
+}
+
+func Vector2 Vector2.divide(Vector2 *this, Vector2 other) @inline {
+  return vector2_divide(*this, other);
+}
+
+func Vector2 Vector2.normalize(Vector2 *this) @inline {
+  return vector2_normalize(*this);
+}
+
+func Vector2 Vector2.lerp(Vector2 *this, Vector2 other, float amount) @inline {
+  return vector2_lerp(*this, other, amount);
+}
+
+func Vector2 Vector2.reflect(Vector2 *this, Vector2 normal) @inline {
+  return vector2_reflect(*this, normal);
+}
+
+func Vector2 Vector2.rotate(Vector2 *this, float degs) @inline {
+  return vector2_rotate(*this, degs);
+}
+
+func Vector2 Vector2.move_towards(Vector2 *this, Vector2 target, float max_distance) @inline {
+  return vector2_move_towards(*this, target, max_distance);
+}
+
 struct Vector3 {
   float x;
   float y;

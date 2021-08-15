@@ -22,5 +22,5 @@ os.system(c3c_command)
 os.system(cc_command)
 
 if os.path.exists('a.out'):
-  print("Probably compiled successfully! Ignore c3c compilation errors, it probably still worked.")
+  print("Probably compiled successfully! Ignore c3c linking errors, it probably still worked.")
   print("run ./a.out to execute.")

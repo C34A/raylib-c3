@@ -15,9 +15,10 @@ python3 gen2.py
 
 At this point, you should be able to use the generated `raylib.c3`.
 
-To build examples, you can use `build-example.py`. This requires raylib to be installed at a system level- see [Raylib - Working on GNU Linux](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux).
+To build examples, you can use `build-example.py`. This requires raylib to be installed at a system
+level- see [Raylib - Working on GNU Linux](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux).
 
 ```bash
-python3 build-example.py basic_window
+python3 build-example.py raylib/basic_window
 ./a.out
 ```
