@@ -16,6 +16,7 @@ struct Ball {
   Vector2 vel; // velocity
 }
 
+// Screen width, height
 const int WIDTH = 800;
 const int HEIGHT = 450;
 
@@ -23,6 +24,7 @@ const float BALL_SIZE = 20.0;
 const Color BALL_COLOR = BLUE;
 const float BALL_SPEED = 2.5;
 
+// Block grid parameters
 const uint ROWS = 2;
 const uint COLUMNS = 8;
 const uint MAX_HEALTH = 1;
@@ -71,8 +73,6 @@ func int main() {
   uint lives = 3;
   bool gameOver = false;
 
-
-
   raylib_c3::init_window(WIDTH, HEIGHT, "Breakout!");
   raylib_c3::init_audio_device();
   raylib_c3::set_target_fps(144);
@@ -85,25 +85,24 @@ func int main() {
   while (!raylib_c3::window_should_close()) {
     // Update
     if (!gameOver) {
-      ball.pos.x += ball.vel.x * BALL_SPEED; // todo: Vector2/3/4 operator overloading
+      ball.pos.x += ball.vel.x * BALL_SPEED;
       ball.pos.y += ball.vel.y * BALL_SPEED;
 
       // paddle movement
-      if (raylib_c3::is_key_down(raylib_c3::KeyboardKey.KEY_RIGHT) && paddle.x < (WIDTH - PADDLE_SIZE)) {
+      if (raylib_c3::is_key_down(KEY_RIGHT) && paddle.x < (WIDTH - PADDLE_SIZE)) {
         paddle.x += 2.0;
       }
-      if (raylib_c3::is_key_down(raylib_c3::KeyboardKey.KEY_LEFT) && paddle.x > 0) {
+      if (raylib_c3::is_key_down(KEY_LEFT) && paddle.x > 0) {
         paddle.x -= 2.0;
       }
 
       // collisions
-      do {
-        // Only allow one collision per frame for simplicity
+      do {// Only allow one collision per frame for simplicity
 
-        // walls
+        // test wall collisions...
         uint wall = collide_ball_walls(&ball, WIDTH, HEIGHT);
         if (wall) {
-          if (wall == 3) {
+          if (wall == 3) { // lose health if the ball hits the bottom of the screen
             lives--;
             if (lives == 0) gameOver = true;
             raylib_c3::play_sound(boop);
@@ -111,12 +110,12 @@ func int main() {
           raylib_c3::play_sound(beep2);
           break;
         }
-        // paddle
+        // test paddle collisions...
         if (collide_ball_paddle(&ball, &paddle)) {
           raylib_c3::play_sound(beep2);
           break;
         }
-        // blocks
+        // test block collisions...
         for (int i = 0; i < (ROWS * COLUMNS); i++) {
           if (collide_ball_block(&ball, &blocks[i])) {
             score++;
@@ -142,7 +141,7 @@ func int main() {
       // Draw paddle
       raylib_c3::draw_rectangle_rec(paddle, PADDLE_COLOR);
 
-      // Draw score, lives
+      // Draw score, lives text
       raylib_c3::draw_text(
         raylib_c3::text_format("Score: %d", score),
         10,
@@ -174,6 +173,9 @@ func int main() {
   return 0;
 }
 
+/**
+ * Generate a color of random hue with saturation 0.75 and value 0.9
+ */
 func Color rand_color() {
   return raylib_c3::color_from_hsv(
     (float)( raylib_c3::get_random_value(0, 360) ),
@@ -182,8 +184,11 @@ func Color rand_color() {
   );
 }
 
-func void draw_box(Box box) {
-  // io::printf("drawing box at (%f, %f) (%f, %f)\n", box.bounds.x, box.bounds.y, box.bounds.width, box.bounds.height);
+/**
+ * Draw a single block. This doesn't really need its own function, but it cleans up the drawing
+ * code a bit.
+ */
+func void draw_box(Box box) @inline {
   raylib_c3::draw_rectangle_rec(box.bounds, box.color);
 }
 
