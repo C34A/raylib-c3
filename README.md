@@ -1,12 +1,15 @@
 # Raylib-C3
 
-This is my feeble attempt at making [C3](https://github.com/c3lang/c3c) language
-bindings for [raylib](https://www.raylib.com/). It is loosely based on
+Raylib-c3 provides minimal raylib bindings for the [C3](https://github.com/c3lang/c3c) language. It is loosely based on
 [raylib-zig](https://github.com/Not-Nik/raylib-zig).
 
 This project is a work in progress and is not currently stable. Use at your own risk.
 
+Raylib-c3 currently only supports linux and dynamic linking to raylib, though static linking is theoretically possible. It does not yet work on windows, due to extremely limited windows support from C3C.
+
 ## usage
+
+If you would like to generate a new version of raylib.c3 from a raylib.h header, run these scripts:
 
 ```bash
 python3 gen.py
